@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PocketSmart AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>💰 PocketSmart AI</h1>
+        <p class="subtitle">Your Smart Budget & Recommendation Assistant</p>
+
+        <div class="card">
+            <label>Monthly Income</label>
+            <input id="income" type="number" placeholder="Enter your income">
+
+            <h3>Add Expense</h3>
+            <div class="row">
+                <input id="category" type="text" placeholder="Category (Food, Travel...)">
+                <input id="amount" type="number" placeholder="Amount">
+                <button onclick="addExpense()">Add</button>
+            </div>
+
+            <ul id="expenseList"></ul>
+            <button class="analyze" onclick="analyzeBudget()">Analyze My Budget</button>
+        </div>
+
+        <div id="result" class="card hidden">
+            <h2>Budget Analysis</h2>
+            <p><b>Income:</b> ₹<span id="incomeResult">0</span></p>
+            <p><b>Total Expense:</b> ₹<span id="expenseResult">0</span></p>
+            <p><b>Remaining Balance:</b> ₹<span id="balanceResult">0</span></p>
+            <h3>Recommendation</h3>
+            <p id="recommendation"></p>
+            <h3>Category Summary</h3>
+            <ul id="categorySummary"></ul>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
